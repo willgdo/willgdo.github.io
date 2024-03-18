@@ -6,7 +6,7 @@ function DowloadButton({ isReduced }: DowloadButtonProps) {
   return (
     <a
       className={`${isReduced ? "btn-download-cv" : "hidden"}`}
-      href="#"
+      href="./assets/cv_WillianOliveira.pdf"
       download
     >
       <img src="./icons/download.png" alt="download CV" />

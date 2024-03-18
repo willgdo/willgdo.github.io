@@ -1,6 +1,4 @@
 // TO-DO
 
-- Arrumar CV e adicionar a página
-- Verificar/adicionar stacks
 - Adicionar css para mobile 
 - Adicionar modal para mostrar informações de experiencia
