@@ -1,9 +1,13 @@
 import Header from "./components/Header.tsx";
+import About from "./components/About.tsx";
 
 function App() {
   return (
     <>
-      <Header />
+      <div className="container">
+        <Header />
+        <About />
+      </div>
     </>
   );
 }
