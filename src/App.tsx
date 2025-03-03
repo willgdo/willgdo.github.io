@@ -1,7 +1,9 @@
+import Header from "./components/Header.tsx";
+
 function App() {
   return (
     <>
-      <h1>Hey ho!</h1>
+      <Header />
     </>
   );
 }
