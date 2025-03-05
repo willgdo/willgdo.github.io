@@ -76,7 +76,7 @@ function Header({ isReduced, onClick }: HeaderProps) {
         <img
           id="btn"
           onClick={onClick}
-          className="chevron-right"
+          className={isReduced ? "hidden" : "chevron-right"}
           src="./chevron-double.png"
         />
       </header>
