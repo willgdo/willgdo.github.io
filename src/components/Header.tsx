@@ -73,9 +73,12 @@ function Header({ isReduced, onClick }: HeaderProps) {
             </ul>
           </div>
         </div>
-        <button id="btn" onClick={onClick}>
-          Ok
-        </button>
+        <img
+          id="btn"
+          onClick={onClick}
+          className="chevron-right"
+          src="./chevron-double.png"
+        />
       </header>
     </>
   );
