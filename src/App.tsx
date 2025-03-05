@@ -8,11 +8,12 @@ function App() {
   function handleClick() {
     setIsReduced(true);
   }
+
   return (
     <>
       <div className="container">
         <Header isReduced={isReduced} onClick={handleClick} />
-        <About isReduced={isReduced}  />
+        <About isReduced={isReduced} />
       </div>
     </>
   );
