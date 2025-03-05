@@ -1,7 +1,11 @@
-function About() {
+interface AboutProps {
+  isReduced: boolean;
+}
+
+function About({ isReduced }: AboutProps) {
   return (
     <>
-      <section className="about"></section>
+      <section className={`about ${isReduced ? "a-expanded" : ""}`}></section>
     </>
   );
 }

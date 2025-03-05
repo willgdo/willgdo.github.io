@@ -1,16 +1,13 @@
-import { useState } from "react";
+interface HeaderProps {
+  isReduced: boolean;
+  onClick: () => void;
+}
 
-function Header() {
-  const [isReduced, setIsReduced] = useState(false);
-
-  function handleClick() {
-    setIsReduced(true);
-  }
-
+function Header({ isReduced, onClick }: HeaderProps) {
   return (
     <>
       <header className={isReduced ? "header h-reduced" : "header"}>
-        <button id="btn" onClick={handleClick}>
+        <button id="btn" onClick={onClick}>
           Ok
         </button>
       </header>
