@@ -68,8 +68,14 @@
 
   & nav ul li:hover {
     background-color: var(--red);
+    color: var(--gray-200) !important;
     cursor: pointer;
   }
+}
+
+.bg-red {
+  color: var(--red) !important;
+  font-weight: bold;
 }
 
 .a-expanded {
@@ -157,6 +163,29 @@
   & p {
     font: var(--text-sm);
     margin-top: 2rem;
+  }
+}
+
+.silver {
+  color: var(--gray-400);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.social ul li {
+  display: flex;
+  margin-top: 1rem;
+  font: var(--text-sm);
+
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 }
 

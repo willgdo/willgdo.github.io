@@ -14,11 +14,11 @@ function Header({ isReduced, onClick }: HeaderProps) {
           </h2>
           <h1>Software Developer</h1>
           <p>
-            Software developer with 9+ years of experience, I am passionate
-            about technology and a person dedicated to learning! I'm always
-            committed to expanding my knowledge, solving problems and
-            contributing to people and companies, ensuring projects meet
-            business goals and drive long-term value.
+            Desenvolvedor de software com 9+ anos de experiência, sou apaixonado
+            por tecnologia e uma pessoa dedicada ao aprendizado! Estou sempre
+            comprometido em expandir meu conhecimento, resolver problemas e
+            contribuir para pessoas e empresas, garantindo que os projetos
+            atendam às metas de negócios e gerem valor a longo prazo.
           </p>
           <div className="tags">
             <ul>
