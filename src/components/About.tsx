@@ -18,9 +18,12 @@ function About({ isReduced }: AboutProps) {
             </nav>
           </div>
           <div>Conteúdo</div>
-          <div>Footer</div>
+          <footer className="footer">By Will</footer>
         </div>
       </section>
+      <a className="btn-download-cv" href="#" download>
+        <img src="./download.png" alt="download CV" title="download CV" />
+      </a>
     </>
   );
 }

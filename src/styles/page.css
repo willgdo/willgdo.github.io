@@ -39,15 +39,15 @@
   overflow: hidden;
 }
 
-.content::before {
-  position: absolute;
-  content: "";
-  width: 6rem;
-  height: 6rem;
-  background-color: var(--gray-200);
-  top: -2rem;
-  right: -2rem;
-  border-radius: 50%;
+.btn-download-cv {
+  position: fixed;
+  top: 3rem;
+  right: 2rem;
+
+  & img {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .nav-wrapper {
@@ -145,6 +145,15 @@
 
 .hidden {
   display: none;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  color: var(--gray-500);
+  font: var(--title-sm);
+  font-weight: bold;
 }
 
 @keyframes move {
