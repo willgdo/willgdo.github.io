@@ -41,7 +41,7 @@
 
 .btn-download-cv {
   position: fixed;
-  top: 3rem;
+  bottom: 2rem;
   right: 2rem;
 
   & img {
@@ -145,6 +145,19 @@
 
 .hidden {
   display: none;
+}
+
+.content-info {
+  width: 80%;
+
+  & h3 {
+    font: var(--title-md);
+  }
+
+  & p {
+    font: var(--text-sm);
+    margin-top: 2rem;
+  }
 }
 
 .footer {
