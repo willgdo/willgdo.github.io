@@ -51,26 +51,35 @@ function About({ isReduced }: AboutProps) {
               <>
                 <h3>{title}</h3>
                 <p>
-                  Olá, sou o Willian, tenho 29 anos e sou desenvolvedor de
-                  software com cerca de 9 anos de experiência. Ao longo da minha
-                  carreira, tive a oportunidade de atuar tanto no front-end
-                  quanto no back-end, mas meu foco principal nos últimos anos
-                  tem sido no desenvolvimento de processos com o Camunda. <br />
-                  Passei por três empresas, e a mais marcante foi a última, onde
-                  atuei por mais de 7 anos em um produto SaaS que oferecia
-                  soluções de gerenciamento de ativos digitais (DAM) e automação
-                  de processos (BPM). Lá, fui responsável por toda a construção
-                  e manutenção dos processos no Camunda, desde a modelagem BPMN
-                  conforme as regras de negócio, desenvolvimento dos serviços e
-                  delegates necessários, integração com outros sistemas, até a
-                  criação dos formulários para cada etapa. <br />
-                  Também participava ativamente de reuniões com as equipes de
-                  produto e negócios, ajudando na definição de projetos e
-                  propondo melhorias técnicas. Nesse período, tive a chance de
-                  trabalhar em projetos robustos para clientes de grande porte,
-                  como Santander, Natura, Boticário, Whirlpool, GM e GPA, o que
-                  me deu bastante experiência em ambientes de alta demanda e
-                  complexidade.
+                  Hello, my friend!
+                  <br />
+                  Eu sou Willian (mas pode me chamar de Will). Tenho 29 anos,
+                  moro em São Paulo, sou casado e pai de um mini adolescente de
+                  3 anos! Além da tecnologia, outra grande paixão que tenho é a
+                  aviação! Em 2019, realizei meu grande sonho e tirei minha
+                  licença de piloto privado.
+                  <br />
+                  <br />
+                  Desde sempre fui fascinado por tecnologia e sabia que essa era
+                  a área que queria seguir. Hoje, com quase uma década de
+                  experiência como desenvolvedor, tenho certeza de que fiz a
+                  melhor escolha! Ao longo da minha trajetória, atuei
+                  principalmente como desenvolvedor front-end e também com
+                  automação de processos utilizando BPMN (Camunda).
+                  <br />
+                  Tive a oportunidade de participar de diversos projetos para
+                  grandes empresas, como: Santander, Natura, Boticário,
+                  Whirlpool, GPA, entre outros. Isso me trouxe experiência
+                  valiosa em ambientes de alta demanda e complexidade.
+                  <br />
+                  <br />
+                  Sou uma pessoa curiosa, que adora aprender e experimentar
+                  novas tecnologias. Também me considero altamente adaptável a
+                  diferentes projetos e equipes.
+                  <br />
+                  <br />
+                  Se quiser saber algo mais, fique à vontade para entrar em
+                  contato!
                 </p>
               </>
             )}
@@ -85,7 +94,7 @@ function About({ isReduced }: AboutProps) {
                   máquina
                 </p>
                 <p>
-                  <strong>FATEC Ipiranga</strong>
+                  <strong>FATEC Ipiranga - Faculdade de tecnologia</strong>
                   <br />
                   Graduação em Análise e desenvolvimento de Sistemas
                 </p>
