@@ -1,18 +1,9 @@
+import { stacks } from "../utils/utils";
+
 interface HeaderProps {
   isReduced: boolean;
   onClick: () => void;
 }
-
-const stacks: string[] = [
-  "html5",
-  "css3",
-  "javascript",
-  "typescript",
-  "react",
-  "nextjs",
-  "nodejs",
-  "python",
-];
 
 function Header({ isReduced, onClick }: HeaderProps) {
   return (

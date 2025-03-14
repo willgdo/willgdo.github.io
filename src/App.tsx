@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./components/Header.tsx";
-import About from "./components/About.tsx";
+import Perfil from "./components/Perfil.tsx";
 
 function App() {
   const [isReduced, setIsReduced] = useState(false);
@@ -13,7 +13,7 @@ function App() {
     <>
       <div className="container">
         <Header isReduced={isReduced} onClick={handleClick} />
-        <About isReduced={isReduced} />
+        <Perfil isReduced={isReduced} />
       </div>
     </>
   );
