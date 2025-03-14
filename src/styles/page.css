@@ -43,6 +43,11 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: var(--subtitle);
+  color: var(--gray-400);
 
   & img {
     width: 3rem;
@@ -186,6 +191,33 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+  }
+}
+
+.exp {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 2rem;
+  font: var(--text-sm);
+  color: var(--gray-200);
+
+  &:hover {
+    background-color: var(--gray-500);
+    cursor: pointer;
+  }
+
+  img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10px;
+  }
+
+  span {
+    color: var(--gray-400);
+    font: var(--subtitle);
   }
 }
 
