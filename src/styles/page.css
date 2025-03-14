@@ -180,6 +180,11 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 2rem;
+
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .social ul li {
