@@ -192,7 +192,7 @@ function About({ isReduced }: AboutProps) {
                     <li>
                       <a href="https://wa.me/+5511965526415" target="_blank">
                         <img
-                          src="./whatsapp.png"
+                          src="./icons/whatsapp.png"
                           alt="whatsapp ícone"
                           width="35px"
                           height="35px"
@@ -207,7 +207,7 @@ function About({ isReduced }: AboutProps) {
                         target="_blank"
                       >
                         <img
-                          src="./linkedin.png"
+                          src="./icons/linkedin.png"
                           alt="linkedin ícone"
                           width="35px"
                           height="35px"
@@ -219,7 +219,7 @@ function About({ isReduced }: AboutProps) {
                     <li>
                       <a href="https://github.com/willgdo" target="_blank">
                         <img
-                          src="./github.png"
+                          src="./icons/github.png"
                           alt="github ícone"
                           width="35px"
                           height="35px"
@@ -234,7 +234,7 @@ function About({ isReduced }: AboutProps) {
                         target="_blank"
                       >
                         <img
-                          src="./instagram.png"
+                          src="./icons/instagram.png"
                           alt="instagram ícone"
                           width="35px"
                           height="35px"
@@ -255,7 +255,7 @@ function About({ isReduced }: AboutProps) {
         href="#"
         download
       >
-        <img src="./download.png" alt="download CV" />
+        <img src="./icons/download.png" alt="download CV" />
         <span>Baixar CV</span>
       </a>
     </>
