@@ -11,8 +11,8 @@ function About({ title }: AboutProps) {
         <br />
         Eu sou Willian (mas pode me chamar de Will). Tenho 29 anos, moro em São
         Paulo, sou casado e pai de um mini adolescente de 3 anos! Além da
-        tecnologia, outra grande paixão que tenho é a aviação! Em 2019, realizei
-        meu grande sonho e tirei minha licença de piloto privado.
+        tecnologia, outra grande paixão que tenho é a aviação! Em 2022, realizei
+        meu grande sonho e tirei minha licença de piloto.
         <br />
         <br />
         Desde sempre fui fascinado por tecnologia e sabia que essa era a área
