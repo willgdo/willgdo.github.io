@@ -105,9 +105,13 @@
     margin-top: 1.5rem;
   }
 
+  & .tags {
+    margin-top: 50px;
+  }
+
   & .tags ul li {
     display: inline-block;
-    margin: 30px 5px;
+    margin: 0px 2px;
 
     & img {
       height: 2rem;
@@ -121,7 +125,7 @@
 }
 
 .p-expanded {
-  width: 90%;
+  width: 95%;
 }
 
 #btn {
