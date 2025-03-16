@@ -27,8 +27,13 @@ function Header({ isReduced, onClick }: HeaderProps) {
                 return (
                   <li key={stack}>
                     <img
+                      src={
+                        stack === "jest"
+                          ? `https://raw.githubusercontent.com/devicons/devicon/master/icons/${stack}/${stack}-plain.svg`
+                          : `https://raw.githubusercontent.com/devicons/devicon/master/icons/${stack}/${stack}-original.svg`
+                      }
                       alt={`${stack} Icon`}
-                      src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${stack}/${stack}-original.svg`}
+                      title={stack}
                     />
                   </li>
                 );

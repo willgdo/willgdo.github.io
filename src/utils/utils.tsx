@@ -4,7 +4,9 @@ export const stacks: string[] = [
   "javascript",
   "typescript",
   "react",
+  "redux",
   "nextjs",
+  "jest",
   "nodejs",
   "python",
 ];
