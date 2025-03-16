@@ -30,8 +30,8 @@ export const social: SocialProps[] = [
     url: "https://github.com/willgdo",
   },
   {
-    name: "instagram",
-    url: "http://instagram.com/_will0liveira/",
+    name: "codepen",
+    url: "https://codepen.io/willgdo",
   },
 ];
 

@@ -18,7 +18,7 @@ function Contact({ title }: ContactProps) {
                     src={`./icons/${item.name}.png`}
                     alt={`${item.name} ícone`}
                   />
-                  {item.url}
+                  <div>{item.url}</div>
                 </a>
               </li>
             );

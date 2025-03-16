@@ -39,22 +39,6 @@
   overflow: hidden;
 }
 
-.btn-download-cv {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font: var(--subtitle);
-  color: var(--gray-400);
-
-  & img {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
 .nav-wrapper {
   margin-top: 3rem;
   background-color: var(--gray-200);
@@ -196,6 +180,30 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    & div {
+      width: fit-content;
+      position: relative;
+
+      &:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    & div::after {
+      content: "";
+      width: 100%;
+      height: 1.5px;
+      background-color: var(--red);
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transform: scaleX(0);
+      transition: transform 200ms linear;
+    }
   }
 }
 
@@ -235,12 +243,38 @@
   font-weight: bold;
 }
 
+.btn-download-cv {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: var(--subtitle);
+  color: var(--gray-400);
+
+  & img {
+    width: 3rem;
+    height: 3rem;
+    animation: shake 3s ease-in-out 3s;
+  }
+}
+
 @keyframes move {
   0% {
     margin-right: 5rem;
   }
   50% {
     margin-right: 3rem;
+  }
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(-180deg);
   }
 }
 

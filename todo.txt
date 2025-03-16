@@ -1,9 +1,6 @@
 // TO-DO
 
 - Arrumar CV e adicionar a página
-- Verificar nome de componentes
 - Verificar/adicionar stacks
-- Verificar itens de contato
-- Refatorar css
 - Adicionar css para mobile 
 - Adicionar modal para mostrar informações de experiencia
