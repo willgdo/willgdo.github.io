@@ -1,4 +1,0 @@
-// TO-DO
-
-- Adicionar css para mobile 
-- Adicionar modal para mostrar informações de experiencia
