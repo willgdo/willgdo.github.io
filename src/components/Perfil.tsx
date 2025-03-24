@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { topics } from "../utils/utils.js";
-import About from "../components/About.js";
-import Education from "../components/Education.js";
-import Experience from "../components/Experience.js";
-import Contact from "../components/Contact.js";
-import DowloadButton from "../components/DowloadButton.js";
+import About from "./About.js";
+import Education from "./Education.js";
+import Experience from "./Experience.js";
+import Contact from "./Contact.js";
+import DowloadButton from "./DowloadButton.js";
 
 interface PerfilProps {
   isReduced: boolean;
