@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router";
 import { Home } from "../pages/Home";
 import { NotFound } from "../pages/NotFound";
-// import { Perfil } from "../pages/Perfil";
 
 export function AppRoutes() {
   return (
