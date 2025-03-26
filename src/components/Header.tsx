@@ -2,10 +2,11 @@ import { stacks } from "../utils/utils";
 
 interface HeaderProps {
   isReduced: boolean;
-  onClick: () => void;
+  onClickDesktop: () => void;
+  onClickMobile: () => void;
 }
 
-function Header({ isReduced, onClick }: HeaderProps) {
+function Header({ isReduced, onClickDesktop, onClickMobile }: HeaderProps) {
   return (
     <>
       <header className={isReduced ? "header h-reduced" : "header"}>
@@ -42,8 +43,14 @@ function Header({ isReduced, onClick }: HeaderProps) {
           </div>
         </div>
         <img
-          id="btn"
-          onClick={onClick}
+          id="btn-open"
+          onClick={onClickDesktop}
+          className={isReduced ? "hidden" : "chevron-right"}
+          src="./icons/chevron-double.png"
+        />
+        <img
+          id="btn-open-mobile"
+          onClick={onClickMobile}
           className={isReduced ? "hidden" : "chevron-right"}
           src="./icons/chevron-double.png"
         />

@@ -9,9 +9,17 @@ export function Home() {
     setIsReduced(true);
   }
 
+  function handleClickMobile() {
+    setIsReduced(false);
+  }
+
   return (
     <div className="container">
-      <Header isReduced={isReduced} onClick={handleClick} />
+      <Header
+        isReduced={isReduced}
+        onClickDesktop={handleClick}
+        onClickMobile={handleClickMobile}
+      />
       <Perfil isReduced={isReduced} />
     </div>
   );
