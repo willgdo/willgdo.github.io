@@ -49,6 +49,16 @@ type ExperienceProps = {
 
 export const experience: ExperienceProps[] = [
   {
+    name: "Globant",
+    urlLogo:
+      "https://media.licdn.com/dms/image/v2/D4D0BAQHupr1U3gIQKA/company-logo_200_200/company-logo_200_200/0/1719839010650/globant_logo?e=1750896000&v=beta&t=ehg3Zjb0JRnmrw9jU6D6TKOf0vl4vNrqA5CEIMdnE3o",
+    role: "Senior Web UI Developer",
+    period: "May/2025 - Current",
+    location: "São Paulo",
+    type: "Remoto",
+    description: "",
+  },
+  {
     name: "Visto Tecnologia",
     urlLogo:
       "https://media.licdn.com/dms/image/v2/C4D0BAQH2vcrgNsIdJg/company-logo_100_100/company-logo_100_100/0/1630509285586/visto_tecnologia_logo?e=1746662400&v=beta&t=5r4SrE_Zu4NkiPXEkC7LnFhs28V4Ii0nars3p-HrAh4",
