@@ -2,4 +2,12 @@
 
 Take a look -> https://willgdo.github.io/
 
-WIP: For mobile isn't still working good because i want create a specific style for that.
+WIP: Está sendo criado um estilo específico para versão mobile, portanto por enquanto somente a versão web está estável.
+
+## 🚀 Tecnologias
+
+Essa página foi desenvolvida com as seguintes tecnologias:
+
+- Vite
+- React
+- Typescript
