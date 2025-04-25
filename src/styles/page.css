@@ -268,12 +268,7 @@
 
 .showWeb {
   width: 100vw;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   & h3 {
     font: var(--title-md);
