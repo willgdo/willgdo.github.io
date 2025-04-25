@@ -10,16 +10,18 @@ function Experience({ title }: ExperienceProps) {
       <h3>{title}</h3>
 
       {experience.map((item) => {
+        const { name, urlLogo, role, period, location, type } = item;
+
         return (
           <div className="exp">
             <div>
-              <img src={item.urlLogo} alt={`logo ${item.name}`} />
+              <img src={urlLogo} alt={`logo ${name}`} />
             </div>
 
             <div>
-              <strong>{`${item.name} - ${item.role}`}</strong>
+              <strong>{`${name} - ${role}`}</strong>
               <br />
-              <span>{`${item.period} | ${item.location} | ${item.type}`}</span>
+              <span>{`${period} | ${location} | ${type}`}</span>
               <br />
             </div>
           </div>
