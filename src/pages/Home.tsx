@@ -3,18 +3,22 @@ import Header from "../components/Header.tsx";
 import Perfil from "../components/Perfil.tsx";
 import { topics } from "../utils/utils.js";
 import About from "../components/About.tsx";
+import Education from "../components/Education.js";
+import Experience from "../components/Experience.js";
+import Contact from "../components/Contact.js";
+import DowloadButton from "../components/DowloadButton.js";
 
 export function Home() {
   const [isReduced, setIsReduced] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-  const [showWeb, setShowWeb] = useState(true);
+  const [section, setSection] = useState("Início");
 
   function toggleMenu() {
     setOpenMenu(!openMenu);
   }
 
-  function toggleShow() {
-    setShowWeb(!showWeb);
+  function toggleShow(section: string) {
+    setSection(section);
     setOpenMenu(!openMenu);
   }
 
@@ -24,14 +28,34 @@ export function Home() {
 
   return (
     <div className="container">
-      {showWeb ? (
+      {section === "Início" && (
         <>
           <Header isReduced={isReduced} />
           <Perfil isReduced={isReduced} />
         </>
-      ) : (
+      )}
+
+      {section === "Sobre" && (
         <div className="showWeb">
-          <About title="Sobre" />
+          <About title={section} />
+        </div>
+      )}
+
+      {section === "Formação" && (
+        <div className="showWeb">
+          <Education title={section} />
+        </div>
+      )}
+
+      {section === "Experiência" && (
+        <div className="showWeb">
+          <Experience title={section} />
+        </div>
+      )}
+
+      {section === "Contato" && (
+        <div className="showWeb">
+          <Contact title={section} />
         </div>
       )}
 
@@ -54,9 +78,10 @@ export function Home() {
         className={openMenu ? "mobile-menu open-menu" : "mobile-menu"}
       >
         <ul>
+          <li onClick={() => toggleShow("Início")}>Início</li>
           {topics.map((topic) => {
             return (
-              <li key={topic} onClick={toggleShow}>
+              <li key={topic} onClick={() => toggleShow(topic)}>
                 {topic}
               </li>
             );
