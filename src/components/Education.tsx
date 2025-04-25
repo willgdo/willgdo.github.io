@@ -9,12 +9,12 @@ function Education({ title }: EducationProps) {
       <p>
         <strong>PUC Minas</strong>
         <br />
-        Pós-graduação em Inteligência artificial e aprendizado de máquina
+        Pós-graduação em inteligência artificial e aprendizado de máquina
       </p>
       <p>
         <strong>FATEC Ipiranga - Faculdade de tecnologia</strong>
         <br />
-        Graduação em Análise e desenvolvimento de Sistemas
+        Graduação em análise e desenvolvimento de sistemas
       </p>
       <p>
         <strong>SLEC - Southern Lakes English College</strong>
@@ -24,14 +24,14 @@ function Education({ title }: EducationProps) {
       <p>
         <strong className="silver">Udemy</strong>
         <br />
-        JavaScript: Algoritmos + Estruturas de Dados
+        JavaScript: Algoritmos + Estruturas de dados
       </p>
       <p>
         <strong className="silver">Caelum</strong>
         <br />
-        Desenvolvimento Web com HTML, CSS e JavaScript
+        Desenvolvimento web com HTML, CSS e javaScript
         <br />
-        Web Apps Responsivas com Javascript e jQuery
+        Web apps responsivas com javaScript e jQuery
       </p>
     </>
   );
