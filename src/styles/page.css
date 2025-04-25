@@ -266,6 +266,25 @@
   display: none;
 }
 
+.showWeb {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+
+  & h3 {
+    font: var(--title-md);
+  }
+
+  & p {
+    font: var(--text-sm);
+    margin-top: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -342,20 +361,14 @@
 
       & li {
         margin: 20px 0;
-        font: var(--text-sm);
+        font: var(--title-md);
         text-align: center;
         border: 1px solid var(--gray-400);
         padding: 10px 0;
+        color: white;
 
         &:hover {
           background-color: var(--red);
-        }
-
-        & a {
-          color: white;
-          text-decoration: none;
-          font-size: 20px;
-          transition: color 0.2s;
         }
       }
     }
