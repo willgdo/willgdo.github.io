@@ -9,7 +9,7 @@ function About({ title }: AboutProps) {
       <p>
         Hello, my friend!
         <br />
-        Eu sou Willian (mas pode me chamar de Will). Tenho 29 anos, moro em São
+        Eu sou Willian (mas pode me chamar de Will). Tenho 30 anos, moro em São
         Paulo, sou casado e pai de um mini adolescente de 3 anos! Além da
         tecnologia, outra grande paixão que tenho é a aviação! Em 2022, realizei
         meu grande sonho e tirei minha licença de piloto.
