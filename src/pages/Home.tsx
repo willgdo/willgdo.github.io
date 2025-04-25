@@ -6,7 +6,6 @@ import About from "../components/About.tsx";
 import Education from "../components/Education.js";
 import Experience from "../components/Experience.js";
 import Contact from "../components/Contact.js";
-import DowloadButton from "../components/DowloadButton.js";
 
 export function Home() {
   const [isReduced, setIsReduced] = useState(false);

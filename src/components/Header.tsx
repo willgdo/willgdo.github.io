@@ -16,9 +16,9 @@ function Header({ isReduced }: HeaderProps) {
           <h1>Software Developer</h1>
           <p>
             Desenvolvedor de software com 9+ anos de experiência, apaixonado por
-            tecnologia e aprendizado contínuo. Meu objetivo é resolver
-            problemas, impulsionar negócios e criar soluções que gerem impacto
-            real e duradouro, sempre buscando expandir meus conhecimentos.
+            tecnologia e sempre em busca de aprender algo novo. Tenho por
+            objetivo resolver problemas, ajudar negócios a crescer e criar
+            soluções que realmente façam sentido e deixem um impacto positivo.
           </p>
           <div className="tags">
             <ul>

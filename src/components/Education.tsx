@@ -19,7 +19,7 @@ function Education({ title }: EducationProps) {
       <p>
         <strong>SLEC - Southern Lakes English College</strong>
         <br />
-        Programa de intercâmbio realizado em Queenstown - Nova Zelândia (Inglês)
+        Programa de intercâmbio (inglês) realizado em Queenstown - Nova Zelândia
       </p>
       <p>
         <strong className="silver">Udemy</strong>
