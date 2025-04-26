@@ -89,3 +89,44 @@ export const experience: ExperienceProps[] = [
     description: "",
   },
 ];
+
+type EducationProps = {
+  school: string;
+  course: string[];
+  main: boolean;
+};
+
+export const education: EducationProps[] = [
+  {
+    school: "PUC Minas",
+    course: [
+      "Pós-graduação em inteligência artificial e aprendizado de máquina",
+    ],
+    main: true,
+  },
+  {
+    school: "FATEC Ipiranga - Faculdade de tecnologia",
+    course: ["Graduação em análise e desenvolvimento de sistemas"],
+    main: true,
+  },
+  {
+    school: "SLEC - Southern Lakes English College",
+    course: [
+      "Programa de intercâmbio (inglês) realizado em Queenstown - Nova Zelândia",
+    ],
+    main: true,
+  },
+  {
+    school: "Udemy",
+    course: ["JavaScript: Algoritmos + Estruturas de dados"],
+    main: false,
+  },
+  {
+    school: "Caelum",
+    course: [
+      "Desenvolvimento web com HTML, CSS e javaScript",
+      "Web apps responsivas com javaScript e jQuery",
+    ],
+    main: false,
+  },
+];

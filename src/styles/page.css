@@ -151,7 +151,10 @@
 
   & p {
     font: var(--text-sm);
-    margin-top: 2rem;
+
+    &:nth-child(even) {
+      margin-top: 2rem;
+    }
   }
 }
 
