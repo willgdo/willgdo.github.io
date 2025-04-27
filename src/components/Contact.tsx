@@ -11,14 +11,12 @@ function Contact({ title }: ContactProps) {
       <div className="social">
         <ul>
           {social.map((item) => {
+            const { name, url } = item;
             return (
-              <li key={item.name}>
-                <a href={item.url} target="_blank">
-                  <img
-                    src={`./icons/${item.name}.png`}
-                    alt={`${item.name} ícone`}
-                  />
-                  <div>{item.url}</div>
+              <li key={name}>
+                <a href={url} target="_blank">
+                  <img src={`./icons/${name}.png`} alt={`${name} ícone`} />
+                  <div>{url}</div>
                 </a>
               </li>
             );

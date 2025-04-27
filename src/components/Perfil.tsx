@@ -19,8 +19,8 @@ function Perfil({ isMinimized }: PerfilProps) {
 
   return (
     <>
-      <section className={`about ${isMinimized ? "a-expanded" : ""}`}>
-        <div className={`content ${isMinimized ? "" : "hidden"}`}>
+      <section className={`information ${isMinimized ? "i-expanded" : ""}`}>
+        <div className={`information-content ${isMinimized ? "" : "hidden"}`}>
           <div className="nav-wrapper">
             <nav>
               <ul>
@@ -38,7 +38,7 @@ function Perfil({ isMinimized }: PerfilProps) {
               </ul>
             </nav>
           </div>
-          <div className="content-info">
+          <div className="section-content">
             {title === "Sobre" && <About title={title} />}
 
             {title === "Formação" && <Education title={title} />}

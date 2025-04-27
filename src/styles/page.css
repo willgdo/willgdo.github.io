@@ -124,13 +124,18 @@
   width: 95%;
 }
 
-.about {
+/* Perfil */
+.information {
   width: 0%;
   height: 100%;
   transition: width 0.5s ease-in-out;
 }
 
-.content {
+.i-expanded {
+  width: 60%;
+}
+
+.information-content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -169,11 +174,7 @@
   font-weight: bold;
 }
 
-.a-expanded {
-  width: 60%;
-}
-
-.content-info {
+.section-content {
   width: 80%;
 
   & h3 {
@@ -182,17 +183,82 @@
 
   & p {
     font: var(--text-sm);
-
     &:nth-child(even) {
       margin-top: 2rem;
     }
   }
 }
 
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  color: var(--gray-500);
+  font: var(--title-sm);
+  font-weight: bold;
+}
+
+/* Download Button */
+.btn-download {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: var(--subtitle);
+  color: var(--gray-400);
+
+  & img {
+    width: 3rem;
+    height: 3rem;
+    animation: shake 3s ease-in-out 3s;
+  }
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(-180deg);
+  }
+}
+
+/* Education*/
 .silver {
   color: var(--gray-400);
 }
 
+/* Experience */
+.exp {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  font: var(--text-sm);
+  color: var(--gray-200);
+
+  &:hover {
+    background-color: var(--gray-500);
+    cursor: pointer;
+  }
+
+  img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10px;
+  }
+
+  span {
+    color: var(--gray-400);
+    font: var(--subtitle);
+  }
+}
+
+/* Contact */
 .social {
   display: flex;
   justify-content: center;
@@ -238,59 +304,6 @@
       transform: scaleX(0);
       transition: transform 200ms linear;
     }
-  }
-}
-
-.exp {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 5px;
-  border-radius: 10px;
-  margin-top: 1.5rem;
-  font: var(--text-sm);
-  color: var(--gray-200);
-
-  &:hover {
-    background-color: var(--gray-500);
-    cursor: pointer;
-  }
-
-  img {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 10px;
-  }
-
-  span {
-    color: var(--gray-400);
-    font: var(--subtitle);
-  }
-}
-
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0px;
-  color: var(--gray-500);
-  font: var(--title-sm);
-  font-weight: bold;
-}
-
-.btn-download-cv {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font: var(--subtitle);
-  color: var(--gray-400);
-
-  & img {
-    width: 3rem;
-    height: 3rem;
-    animation: shake 3s ease-in-out 3s;
   }
 }
 
@@ -379,17 +392,8 @@
     }
   }
 
-  .about {
-    width: 100%;
+  /* Perfil */
+  .information {
     height: 0%;
-  }
-}
-
-@keyframes shake {
-  25% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(-180deg);
   }
 }

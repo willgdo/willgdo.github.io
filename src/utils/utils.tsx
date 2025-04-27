@@ -13,27 +13,44 @@ export const stacks: string[] = [
 
 export const topics: string[] = ["Sobre", "Formação", "Experiência", "Contato"];
 
-type SocialProps = {
-  name: string;
-  url: string;
+type EducationProps = {
+  school: string;
+  course: string[];
+  main: boolean;
 };
 
-export const social: SocialProps[] = [
+export const education: EducationProps[] = [
   {
-    name: "whatsapp",
-    url: "https://wa.me/+5511965526415",
+    school: "PUC Minas",
+    course: [
+      "Pós-graduação em inteligência artificial e aprendizado de máquina",
+    ],
+    main: true,
   },
   {
-    name: "linkedin",
-    url: "https://www.linkedin.com/in/willoliveira737/",
+    school: "FATEC Ipiranga - Faculdade de tecnologia",
+    course: ["Graduação em análise e desenvolvimento de sistemas"],
+    main: true,
   },
   {
-    name: "github",
-    url: "https://github.com/willgdo",
+    school: "SLEC - Southern Lakes English College",
+    course: [
+      "Programa de intercâmbio (inglês) realizado em Queenstown - Nova Zelândia",
+    ],
+    main: true,
   },
   {
-    name: "codepen",
-    url: "https://codepen.io/willgdo",
+    school: "Udemy",
+    course: ["JavaScript: Algoritmos + Estruturas de dados"],
+    main: false,
+  },
+  {
+    school: "Caelum",
+    course: [
+      "Desenvolvimento web com HTML, CSS e javaScript",
+      "Web apps responsivas com javaScript e jQuery",
+    ],
+    main: false,
   },
 ];
 
@@ -90,43 +107,26 @@ export const experience: ExperienceProps[] = [
   },
 ];
 
-type EducationProps = {
-  school: string;
-  course: string[];
-  main: boolean;
+type SocialProps = {
+  name: string;
+  url: string;
 };
 
-export const education: EducationProps[] = [
+export const social: SocialProps[] = [
   {
-    school: "PUC Minas",
-    course: [
-      "Pós-graduação em inteligência artificial e aprendizado de máquina",
-    ],
-    main: true,
+    name: "whatsapp",
+    url: "https://wa.me/+5511965526415",
   },
   {
-    school: "FATEC Ipiranga - Faculdade de tecnologia",
-    course: ["Graduação em análise e desenvolvimento de sistemas"],
-    main: true,
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/willoliveira737/",
   },
   {
-    school: "SLEC - Southern Lakes English College",
-    course: [
-      "Programa de intercâmbio (inglês) realizado em Queenstown - Nova Zelândia",
-    ],
-    main: true,
+    name: "github",
+    url: "https://github.com/willgdo",
   },
   {
-    school: "Udemy",
-    course: ["JavaScript: Algoritmos + Estruturas de dados"],
-    main: false,
-  },
-  {
-    school: "Caelum",
-    course: [
-      "Desenvolvimento web com HTML, CSS e javaScript",
-      "Web apps responsivas com javaScript e jQuery",
-    ],
-    main: false,
+    name: "codepen",
+    url: "https://codepen.io/willgdo",
   },
 ];
