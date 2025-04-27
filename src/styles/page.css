@@ -50,6 +50,7 @@
   display: none;
 }
 
+/* Header */
 .header {
   width: 100%;
   height: 100%;
@@ -62,8 +63,65 @@
   position: relative;
 }
 
-.h-reduced {
+.minimized {
   width: 40%;
+}
+
+.header-container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+
+  & > img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--gray-200);
+    box-shadow: 0px 0px 0px 5px var(--gray-600);
+    margin-bottom: 30px;
+  }
+
+  & h2 {
+    font: var(--title-md);
+    color: var(--red);
+  }
+
+  & h1 {
+    font: var(--title-lg);
+    color: var(--gray-600);
+  }
+
+  & p {
+    font: var(--text-sm);
+    color: var(--gray-600);
+    margin-top: 1.5rem;
+  }
+
+  & .stacks {
+    margin-top: 50px;
+  }
+
+  & .stacks ul li {
+    display: inline-block;
+    margin: 0px 2px;
+
+    & img {
+      height: 2rem;
+      width: 2.5rem;
+    }
+
+    & img:hover {
+      opacity: 0.4;
+    }
+  }
+}
+
+.expanded {
+  width: 95%;
 }
 
 .about {
@@ -113,63 +171,6 @@
 
 .a-expanded {
   width: 60%;
-}
-
-.perfil {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 2rem;
-  text-align: center;
-
-  & > img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid var(--gray-200);
-    box-shadow: 0px 0px 0px 5px var(--gray-600);
-    margin-bottom: 30px;
-  }
-
-  & h2 {
-    font: var(--title-md);
-    color: var(--red);
-  }
-
-  & h1 {
-    font: var(--title-lg);
-    color: var(--gray-600);
-  }
-
-  & p {
-    font: var(--text-sm);
-    color: var(--gray-600);
-    margin-top: 1.5rem;
-  }
-
-  & .tags {
-    margin-top: 50px;
-  }
-
-  & .tags ul li {
-    display: inline-block;
-    margin: 0px 2px;
-
-    & img {
-      height: 2rem;
-      width: 2.5rem;
-    }
-
-    & img:hover {
-      opacity: 0.4;
-    }
-  }
-}
-
-.p-expanded {
-  width: 95%;
 }
 
 .content-info {
@@ -350,35 +351,25 @@
     right: 0;
   }
 
+  /* Header */
   .header {
     box-shadow: none;
   }
 
-  .about {
-    width: 100%;
-    height: 0%;
-  }
-
-  .perfil {
+  .header-container {
     width: 100%;
     padding: 1.5rem;
 
-    justify-content: center;
-    align-items: center;
-
-    & h1 {
+    & h1,
+    h2 {
       font-size: 2em;
     }
 
-    & h2 {
-      font-size: 2em;
-    }
-
-    & .tags ul {
+    & .stacks ul {
       margin-top: -30px;
     }
 
-    & .tags ul li {
+    & .stacks ul li {
       margin: 15px;
 
       & img {
@@ -386,6 +377,11 @@
         width: 2rem;
       }
     }
+  }
+
+  .about {
+    width: 100%;
+    height: 0%;
   }
 }
 
