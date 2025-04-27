@@ -10,72 +10,69 @@ import { topics } from "../utils/utils.js";
 export function Home() {
   const [isMinimized, setIsMinimized] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [section, setSection] = useState("Início");
+  const [sectionTitle, setSectionTitle] = useState("Início");
 
-  function openMenu() {
+  const openMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  }
+  };
 
-  function showSection(section: string) {
-    setSection(section);
+  const showSection = (sectionTitle: string) => {
+    setSectionTitle(sectionTitle);
     setIsMenuOpen(!isMenuOpen);
-  }
+  };
 
-  function minimizeHome() {
+  const minimizeHome = () => {
     setIsMinimized(true);
-  }
+  };
 
   return (
     <div className="container">
-      {section === "Início" && (
+      {sectionTitle === "Início" && (
         <>
           <Header isMinimized={isMinimized} />
           <Perfil isMinimized={isMinimized} />
         </>
       )}
 
-      {section === "Sobre" && (
-        <div className="showWeb">
-          <About title={section} />
-        </div>
+      {sectionTitle === "Sobre" && (
+        <section className="section">
+          <About title={sectionTitle} />
+        </section>
       )}
 
-      {section === "Formação" && (
-        <div className="showWeb">
-          <Education title={section} />
-        </div>
+      {sectionTitle === "Formação" && (
+        <section className="section">
+          <Education title={sectionTitle} />
+        </section>
       )}
 
-      {section === "Experiência" && (
-        <div className="showWeb">
-          <Experience title={section} />
-        </div>
+      {sectionTitle === "Experiência" && (
+        <section className="section">
+          <Experience title={sectionTitle} />
+        </section>
       )}
 
-      {section === "Contato" && (
-        <div className="showWeb">
-          <Contact title={section} />
-        </div>
+      {sectionTitle === "Contato" && (
+        <section className="section">
+          <Contact title={sectionTitle} />
+        </section>
       )}
 
-      {/* Botão para abrir menu com informações (web) */}
+      {/* Botão para minimizar home e mostrar menus das seções (web)) */}
       <img
-        id="btn-open"
+        id="btn-chevron"
         onClick={minimizeHome}
-        className={isMinimized ? "hidden" : "chevron-right"}
+        className={isMinimized ? "hidden" : ""}
         src="./icons/chevron-double.png"
       />
 
-      {/* Botão para abrir menu com informações (mobile) */}
-      <div className="menu-icon" onClick={openMenu}>
+      {/* Botão para abrir menu das seções (mobile) */}
+      <div className="menu-mobile-icon" onClick={openMenu}>
         ☰
       </div>
 
-      {/* Menu com informações (mobile) */}
-      <nav
-        id="mobileMenu"
-        className={isMenuOpen ? "mobile-menu open-menu" : "mobile-menu"}
-      >
+      {/* Menu (mobile) */}
+      <nav className={isMenuOpen ? "menu-mobile menu-open" : "menu-mobile"}>
         <ul>
           <li onClick={() => showSection("Início")}>Início</li>
           {topics.map((topic) => {
