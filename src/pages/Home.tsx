@@ -12,16 +12,16 @@ export function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [section, setSection] = useState("Início");
 
-  function toggleMenu() {
+  function openMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
 
-  function toggleShow(section: string) {
+  function showSection(section: string) {
     setSection(section);
     setIsMenuOpen(!isMenuOpen);
   }
 
-  function handleClick() {
+  function minimizeHome() {
     setIsMinimized(true);
   }
 
@@ -61,13 +61,13 @@ export function Home() {
       {/* Botão para abrir menu com informações (web) */}
       <img
         id="btn-open"
-        onClick={handleClick}
+        onClick={minimizeHome}
         className={isMinimized ? "hidden" : "chevron-right"}
         src="./icons/chevron-double.png"
       />
 
       {/* Botão para abrir menu com informações (mobile) */}
-      <div className="menu-icon" onClick={toggleMenu}>
+      <div className="menu-icon" onClick={openMenu}>
         ☰
       </div>
 
@@ -77,10 +77,10 @@ export function Home() {
         className={isMenuOpen ? "mobile-menu open-menu" : "mobile-menu"}
       >
         <ul>
-          <li onClick={() => toggleShow("Início")}>Início</li>
+          <li onClick={() => showSection("Início")}>Início</li>
           {topics.map((topic) => {
             return (
-              <li key={topic} onClick={() => toggleShow(topic)}>
+              <li key={topic} onClick={() => showSection(topic)}>
                 {topic}
               </li>
             );
