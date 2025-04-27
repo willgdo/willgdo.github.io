@@ -1,36 +1,36 @@
 import { useState } from "react";
 import Header from "../components/Header.tsx";
 import Perfil from "../components/Perfil.tsx";
-import { topics } from "../utils/utils.js";
 import About from "../components/About.tsx";
 import Education from "../components/Education.js";
 import Experience from "../components/Experience.js";
 import Contact from "../components/Contact.js";
+import { topics } from "../utils/utils.js";
 
 export function Home() {
-  const [isReduced, setIsReduced] = useState(false);
-  const [openMenu, setOpenMenu] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [section, setSection] = useState("Início");
 
   function toggleMenu() {
-    setOpenMenu(!openMenu);
+    setIsMenuOpen(!isMenuOpen);
   }
 
   function toggleShow(section: string) {
     setSection(section);
-    setOpenMenu(!openMenu);
+    setIsMenuOpen(!isMenuOpen);
   }
 
   function handleClick() {
-    setIsReduced(true);
+    setIsMinimized(true);
   }
 
   return (
     <div className="container">
       {section === "Início" && (
         <>
-          <Header isReduced={isReduced} />
-          <Perfil isReduced={isReduced} />
+          <Header isMinimized={isMinimized} />
+          <Perfil isMinimized={isMinimized} />
         </>
       )}
 
@@ -62,7 +62,7 @@ export function Home() {
       <img
         id="btn-open"
         onClick={handleClick}
-        className={isReduced ? "hidden" : "chevron-right"}
+        className={isMinimized ? "hidden" : "chevron-right"}
         src="./icons/chevron-double.png"
       />
 
@@ -74,7 +74,7 @@ export function Home() {
       {/* Menu com informações (mobile) */}
       <nav
         id="mobileMenu"
-        className={openMenu ? "mobile-menu open-menu" : "mobile-menu"}
+        className={isMenuOpen ? "mobile-menu open-menu" : "mobile-menu"}
       >
         <ul>
           <li onClick={() => toggleShow("Início")}>Início</li>

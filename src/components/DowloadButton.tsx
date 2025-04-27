@@ -1,11 +1,11 @@
 interface DowloadButtonProps {
-  isReduced: boolean;
+  isMinimized: boolean;
 }
 
-function DowloadButton({ isReduced }: DowloadButtonProps) {
+function DowloadButton({ isMinimized }: DowloadButtonProps) {
   return (
     <a
-      className={`${isReduced ? "btn-download-cv" : "hidden"}`}
+      className={`${isMinimized ? "btn-download-cv" : "hidden"}`}
       href="./assets/cv_WillianOliveira.pdf"
       download
     >

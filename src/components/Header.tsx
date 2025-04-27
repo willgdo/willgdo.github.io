@@ -1,14 +1,14 @@
 import { stacks } from "../utils/utils";
 
 interface HeaderProps {
-  isReduced: boolean;
+  isMinimized: boolean;
 }
 
-function Header({ isReduced }: HeaderProps) {
+function Header({ isMinimized }: HeaderProps) {
   return (
     <>
-      <header className={isReduced ? "header h-reduced" : "header"}>
-        <div className={isReduced ? "perfil p-expanded" : "perfil"}>
+      <header className={isMinimized ? "header h-reduced" : "header"}>
+        <div className={isMinimized ? "perfil p-expanded" : "perfil"}>
           <img src="./assets/photo.jpg" alt="Imagem de Willian Oliveira" />
           <h2>
             <strong>Willian Oliveira</strong>

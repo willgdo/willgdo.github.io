@@ -7,10 +7,10 @@ import Contact from "./Contact.js";
 import DowloadButton from "./DowloadButton.js";
 
 interface PerfilProps {
-  isReduced: boolean;
+  isMinimized: boolean;
 }
 
-function Perfil({ isReduced }: PerfilProps) {
+function Perfil({ isMinimized }: PerfilProps) {
   const [title, setTitle] = useState("Sobre");
 
   function handleContent(newTitle: string) {
@@ -19,8 +19,8 @@ function Perfil({ isReduced }: PerfilProps) {
 
   return (
     <>
-      <section className={`about ${isReduced ? "a-expanded" : ""}`}>
-        <div className={`content ${isReduced ? "" : "hidden"}`}>
+      <section className={`about ${isMinimized ? "a-expanded" : ""}`}>
+        <div className={`content ${isMinimized ? "" : "hidden"}`}>
           <div className="nav-wrapper">
             <nav>
               <ul>
@@ -51,7 +51,7 @@ function Perfil({ isReduced }: PerfilProps) {
           <footer className="footer">By Will</footer>
         </div>
       </section>
-      <DowloadButton isReduced={isReduced} />
+      <DowloadButton isMinimized={isMinimized} />
     </>
   );
 }
