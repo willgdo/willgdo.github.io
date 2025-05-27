@@ -67,8 +67,7 @@ type ExperienceProps = {
 export const experience: ExperienceProps[] = [
   {
     name: "Globant",
-    urlLogo:
-      "https://media.licdn.com/dms/image/v2/D4D0BAQHupr1U3gIQKA/company-logo_200_200/company-logo_200_200/0/1719839010650/globant_logo?e=1750896000&v=beta&t=ehg3Zjb0JRnmrw9jU6D6TKOf0vl4vNrqA5CEIMdnE3o",
+    urlLogo: "./assets/globant_logo.jpeg",
     role: "Senior Web UI Developer",
     period: "May/2025 - Current",
     location: "São Paulo",
@@ -77,8 +76,7 @@ export const experience: ExperienceProps[] = [
   },
   {
     name: "Visto Tecnologia",
-    urlLogo:
-      "https://media.licdn.com/dms/image/v2/C4D0BAQH2vcrgNsIdJg/company-logo_100_100/company-logo_100_100/0/1630509285586/visto_tecnologia_logo?e=1746662400&v=beta&t=5r4SrE_Zu4NkiPXEkC7LnFhs28V4Ii0nars3p-HrAh4",
+    urlLogo: "./assets/visto_tecnologia_logo.jpeg",
     role: "Senior Software Developer",
     period: "Mar/2017 - Dez/2024 (7 anos e 9 meses)",
     location: "São Paulo",
@@ -87,8 +85,7 @@ export const experience: ExperienceProps[] = [
   },
   {
     name: "Santa Transmedia",
-    urlLogo:
-      "https://media.licdn.com/dms/image/v2/C4D0BAQEl9FKtIuJ7tQ/company-logo_100_100/company-logo_100_100/0/1631373459452/santa_transmedia_logo?e=1746662400&v=beta&t=6uZ7FZtZNV7OgO-1tVzJN03aYDV8hnlbkbNXSwH46aU",
+    urlLogo: "./assets/santa_transmedia_logo.jpeg",
     role: "Web Developer",
     period: "Jul/2016 - Jan/2017 (7 meses) ",
     location: "São Paulo",
@@ -97,8 +94,7 @@ export const experience: ExperienceProps[] = [
   },
   {
     name: "Avelor Tecnologia da Informação",
-    urlLogo:
-      "https://media.licdn.com/dms/image/v2/C560BAQEyA2WbdnCdxw/company-logo_200_200/company-logo_200_200/0/1631357099395?e=1746662400&v=beta&t=1jqXwKbH5KncKr5EjvR2RVuy0ncsD23mnweCT4GR_So",
+    urlLogo: "./assets/avelor_logo.jpeg",
     role: "Web Developer (estágio)",
     period: "Out/2015 - Jul/2016 (9 meses)",
     location: "São Paulo",
