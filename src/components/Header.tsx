@@ -18,10 +18,9 @@ function Header({ isMinimized }: HeaderProps) {
         </h2>
         <h1>Software Developer</h1>
         <p>
-          Desenvolvedor de software com 9+ anos de experiência, apaixonado por
-          tecnologia e sempre em busca de aprender algo novo. Tenho por objetivo
-          resolver problemas, ajudar negócios a crescer e criar soluções que
-          realmente façam sentido e deixem um impacto positivo.
+          Desenvolvedor de software com 9+ anos de experiência. <br />
+          Gosto de resolver problemas, criar soluções simples para desafios
+          complexos e deixar cada projeto um pouco melhor do que encontrei.
         </p>
         <div className="stacks">
           <ul>

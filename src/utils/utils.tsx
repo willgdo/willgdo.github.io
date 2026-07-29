@@ -6,9 +6,8 @@ export const stacks: string[] = [
   "react",
   "redux",
   "nextjs",
+  "playwright",
   "jest",
-  "nodejs",
-  "python",
 ];
 
 export const topics: string[] = ["Sobre", "Formação", "Experiência", "Contato"];
@@ -66,10 +65,10 @@ type ExperienceProps = {
 
 export const experience: ExperienceProps[] = [
   {
-    name: "Globant",
+    name: "Globant @McKinsey & Company",
     urlLogo: "./assets/globant_logo.jpeg",
     role: "Senior Web UI Developer",
-    period: "May/2025 - Current",
+    period: "May/2025 - Atual",
     location: "São Paulo",
     type: "Remoto",
     description: "",
@@ -93,7 +92,7 @@ export const experience: ExperienceProps[] = [
     description: "",
   },
   {
-    name: "Avelor Tecnologia da Informação",
+    name: "Avelor",
     urlLogo: "./assets/avelor_logo.jpeg",
     role: "Web Developer (estágio)",
     period: "Out/2015 - Jul/2016 (9 meses)",

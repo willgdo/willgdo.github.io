@@ -9,8 +9,8 @@ function About({ title }: AboutProps) {
       <p>
         Hello, my friend!
         <br />
-        Eu sou Willian (mas pode me chamar de Will). Tenho 30 anos, moro em São
-        Paulo, sou casado e pai de um mini adolescente de 3 anos! Além da
+        Eu sou Willian (mas pode me chamar de Will). Tenho 31 anos, moro em São
+        Paulo, sou casado e pai de um mini adolescente de 4 anos! Além da
         tecnologia, outra grande paixão que tenho é a aviação! Em 2022, realizei
         meu grande sonho e tirei minha licença de piloto.
         <br />
@@ -22,9 +22,9 @@ function About({ title }: AboutProps) {
         também com automação de processos utilizando BPMN (Camunda).
         <br />
         Tive a oportunidade de participar de diversos projetos para grandes
-        empresas, como: Santander, Natura, Boticário, Whirlpool, GPA, entre
-        outros. Isso me trouxe experiência valiosa em ambientes de alta demanda
-        e complexidade.
+        empresas, como: McKinsey & Company, Santander, Natura, Boticário,
+        Whirlpool, GPA, entre outros. Isso me trouxe experiência valiosa em
+        ambientes de alta demanda e complexidade.
         <br />
         <br />
         Sou uma pessoa curiosa, que adora aprender e experimentar novas
