@@ -47,8 +47,6 @@ function Perfil({ isMinimized }: PerfilProps) {
 
             {title === "Contato" && <Contact title={title} />}
           </div>
-
-          <footer className="footer">By Will</footer>
         </div>
       </div>
       <DowloadButton isMinimized={isMinimized} />

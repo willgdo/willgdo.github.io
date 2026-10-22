@@ -178,15 +178,6 @@
   }
 }
 
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0px;
-  color: var(--gray-500);
-  font: var(--title-sm);
-  font-weight: bold;
-}
-
 /* Download Button */
 .btn-download {
   position: fixed;
