@@ -1,13 +1,13 @@
-## My web page
+# 🌐 willgdo.github.io
 
-Take a look -> https://willgdo.github.io/
+Site pessoal, desenvolvido para centralizar informações, trajetória profissional, formação e canais de contato.
 
-WIP: Está sendo criado um estilo específico para versão mobile, portanto por enquanto somente a versão web está estável.
+🔗 **Acesse online:** [willgdo.github.io](https://willgdo.github.io/)
 
-## 🚀 Tecnologias
+---
 
-Essa página foi desenvolvida com as seguintes tecnologias:
+### 🛠️ Tecnologias Utilizadas
 
-- Vite
-- React
-- Typescript
+- **React**
+- **TypeScript**
+- **Vite**
