@@ -68,7 +68,7 @@ export const experience: ExperienceProps[] = [
     name: "Globant @McKinsey & Company",
     urlLogo: "./assets/globant_logo.jpeg",
     role: "Senior Web UI Developer",
-    period: "May/2025 - Atual",
+    period: "May/2025 - Aug/2026 (1 ano e 3 meses)",
     location: "São Paulo",
     type: "Remoto",
     description: "",

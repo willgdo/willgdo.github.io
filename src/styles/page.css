@@ -313,6 +313,8 @@
   /* Home */
   .container {
     flex-direction: column;
+    background-color: var(--gray-200);
+    padding: 0px 0px calc(20px + env(safe-area-inset-bottom, 0px));
   }
 
   #btn-chevron {
