@@ -1,10 +1,10 @@
 import { stacks } from "../utils/utils";
 
-interface HeaderProps {
+interface HeroProps {
   isMinimized: boolean;
 }
 
-function Header({ isMinimized }: HeaderProps) {
+function Hero({ isMinimized }: HeroProps) {
   return (
     <header className={isMinimized ? "header minimized" : "header"}>
       <div
@@ -19,8 +19,9 @@ function Header({ isMinimized }: HeaderProps) {
         <h1>Software Developer</h1>
         <p>
           Desenvolvedor de software com 9+ anos de experiência. <br />
-          Gosto de resolver problemas, criar soluções simples para desafios
-          complexos e deixar cada projeto um pouco melhor do que encontrei.
+          Trabalhando para arquiteturas de UI escaláveis e descomplicando
+          desafios complexos, unindo código limpo, alta performance e a melhor
+          experiência de usuário
         </p>
         <div className="stacks">
           <ul>
@@ -46,4 +47,4 @@ function Header({ isMinimized }: HeaderProps) {
   );
 }
 
-export default Header;
+export default Hero;

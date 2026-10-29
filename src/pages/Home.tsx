@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Header from "../components/Header.tsx";
+import Hero from "../components/Hero.tsx";
 import Perfil from "../components/Perfil.tsx";
 import About from "../components/About.tsx";
 import Education from "../components/Education.js";
@@ -29,31 +29,31 @@ export function Home() {
     <div className="container">
       {sectionTitle === "Início" && (
         <>
-          <Header isMinimized={isMinimized} />
+          <Hero isMinimized={isMinimized} />
           <Perfil isMinimized={isMinimized} />
         </>
       )}
 
       {sectionTitle === "Sobre" && (
-        <section className="section">
+        <section>
           <About title={sectionTitle} />
         </section>
       )}
 
       {sectionTitle === "Formação" && (
-        <section className="section">
+        <section>
           <Education title={sectionTitle} />
         </section>
       )}
 
       {sectionTitle === "Experiência" && (
-        <section className="section">
+        <section>
           <Experience title={sectionTitle} />
         </section>
       )}
 
       {sectionTitle === "Contato" && (
-        <section className="section">
+        <section>
           <Contact title={sectionTitle} />
         </section>
       )}

@@ -27,7 +27,7 @@ export const education: EducationProps[] = [
     main: true,
   },
   {
-    school: "FATEC Ipiranga - Faculdade de tecnologia",
+    school: "FATEC Ipiranga",
     course: ["Graduação em análise e desenvolvimento de sistemas"],
     main: true,
   },
@@ -68,7 +68,7 @@ export const experience: ExperienceProps[] = [
     name: "Globant @McKinsey & Company",
     urlLogo: "./assets/globant_logo.jpeg",
     role: "Senior Web UI Developer",
-    period: "May/2025 - Aug/2026 (1 ano e 3 meses)",
+    period: "Mai/2025 - Ago/2026 (1 ano e 3 meses)",
     location: "São Paulo",
     type: "Remoto",
     description: "",

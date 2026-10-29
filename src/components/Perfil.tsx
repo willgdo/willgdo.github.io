@@ -19,7 +19,7 @@ function Perfil({ isMinimized }: PerfilProps) {
 
   return (
     <>
-      <section className={`information ${isMinimized ? "i-expanded" : ""}`}>
+      <div className={`information ${isMinimized ? "i-expanded" : ""}`}>
         <div className={`information-content ${isMinimized ? "" : "hidden"}`}>
           <div className="nav-wrapper">
             <nav>
@@ -50,7 +50,7 @@ function Perfil({ isMinimized }: PerfilProps) {
 
           <footer className="footer">By Will</footer>
         </div>
-      </section>
+      </div>
       <DowloadButton isMinimized={isMinimized} />
     </>
   );

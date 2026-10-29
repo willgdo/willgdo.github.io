@@ -1,26 +1,10 @@
-/* Home */
+/* Hero */
 .container {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: start;
   align-items: center;
-}
-
-.section {
-  width: 100vw;
-  padding: 2rem 1rem;
-
-  & h3 {
-    font: var(--title-md);
-  }
-
-  & p {
-    font: var(--text-sm);
-    &:nth-child(even) {
-      margin-top: 2rem;
-    }
-  }
 }
 
 #btn-chevron {
@@ -141,7 +125,6 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -177,17 +160,21 @@
 }
 
 .section-content {
-  width: 80%;
+  padding-top: 3rem;
+  width: 75%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: fit-content;
 
   & h3 {
     font: var(--title-md);
+    margin-bottom: 1rem;
   }
 
   & p {
     font: var(--text-sm);
-    &:nth-child(even) {
-      margin-top: 2rem;
-    }
+    margin-top: 1rem;
   }
 }
 
@@ -239,7 +226,7 @@
   gap: 1rem;
   padding: 5px;
   border-radius: 10px;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font: var(--text-sm);
   color: var(--gray-200);
 
@@ -265,7 +252,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 2rem;
 
   img {
     width: 2.5rem;
@@ -275,7 +261,7 @@
 
 .social ul li {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   font: var(--text-sm);
 
   & a {
@@ -363,6 +349,23 @@
     }
   }
 
+  section {
+    padding: 3.5rem 2rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--gray-600);
+
+    & h3 {
+      font: var(--title-md);
+      margin-bottom: 1rem;
+    }
+
+    & p {
+      font: var(--text-sm);
+      margin-top: 1rem;
+    }
+  }
+
   /* menu-mobile visível */
   .menu-open {
     right: 0;
@@ -399,5 +402,20 @@
   /* Perfil */
   .information {
     height: 0%;
+  }
+
+  .social {
+    img {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  .social ul li {
+    font-size: 0.85rem;
+
+    & a {
+      gap: 0.5rem;
+    }
   }
 }
