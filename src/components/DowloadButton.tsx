@@ -6,7 +6,7 @@ function DowloadButton({ isMinimized }: DowloadButtonProps) {
   return (
     <a
       className={`${isMinimized ? "btn-download" : "hidden"}`}
-      href="./assets/cv_WillianOliveira.pdf"
+      href="./assets/cv_WillianOliveira_pt.pdf"
       download
     >
       <img src="./icons/download.png" alt="download CV" />
