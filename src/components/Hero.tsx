@@ -1,41 +1,45 @@
 import { stacks } from "../utils/utils";
 
 interface HeroProps {
-  isMinimized: boolean;
+  isExpanded: boolean;
 }
 
-function Hero({ isMinimized }: HeroProps) {
+export default function Hero({ isExpanded }: HeroProps) {
   return (
-    <header className={isMinimized ? "header minimized" : "header"}>
-      <div
-        className={
-          isMinimized ? "header-container expanded" : "header-container"
-        }
-      >
-        <img src="./assets/photo.jpg" alt="Imagem de Willian Oliveira" />
-        <h2>
-          <strong>Willian Oliveira</strong>
-        </h2>
-        <h1>Software Developer</h1>
-        <p>
-          Desenvolvedor de software com 9+ anos de experiência. <br />
-          Trabalhando para arquiteturas de UI escaláveis e descomplicando
-          desafios complexos, unindo código limpo, alta performance e a melhor
-          experiência de usuário
+    <header
+      className={`hero-panel ${isExpanded ? "hero-panel--contracted" : ""}`}
+    >
+      <div className="hero-content">
+        <img
+          src="./assets/photo.jpg"
+          alt="Foto de perfil de Willian Oliveira"
+          className="hero-avatar"
+        />
+        <h2 className="hero-subtitle">Willian Oliveira</h2>
+        <h1 className="hero-title">Software Developer</h1>
+
+        <p className="hero-description">
+          Desenvolvedor de software com quase uma década de experiência.
+          Especializado em arquiteturas de UI escaláveis, microfrontends e
+          performance web, transformando problemas complexos em interfaces
+          fluidas e limpas.
         </p>
-        <div className="stacks">
+
+        <div className="tech-stack-list">
           <ul>
             {stacks.map((stack) => {
+              const iconUrl =
+                stack === "jest"
+                  ? `https://raw.githubusercontent.com/devicons/devicon/master/icons/${stack}/${stack}-plain.svg`
+                  : `https://raw.githubusercontent.com/devicons/devicon/master/icons/${stack}/${stack}-original.svg`;
+
               return (
                 <li key={stack}>
                   <img
-                    src={
-                      stack === "jest"
-                        ? `https://raw.githubusercontent.com/devicons/devicon/master/icons/${stack}/${stack}-plain.svg`
-                        : `https://raw.githubusercontent.com/devicons/devicon/master/icons/${stack}/${stack}-original.svg`
-                    }
-                    alt={`${stack} Icon`}
+                    src={iconUrl}
+                    alt={`Ícone da tecnologia ${stack}`}
                     title={stack}
+                    loading="lazy"
                   />
                 </li>
               );
@@ -46,5 +50,3 @@ function Hero({ isMinimized }: HeroProps) {
     </header>
   );
 }
-
-export default Hero;

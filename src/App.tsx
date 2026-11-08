@@ -1,91 +1,91 @@
 import { useState } from "react";
-import Hero from "./components/Hero.tsx";
-import Perfil from "./components/Perfil.tsx";
-import About from "./components/About.tsx";
-import Education from "./components/Education.js";
-import Experience from "./components/Experience.js";
-import Contact from "./components/Contact.js";
-import { topics } from "./utils/utils.js";
+import Hero from "./components/Hero";
+import ProfileDetails from "./components/ProfileDetails";
+import About from "./components/About";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import DownloadButton from "./components/DownloadButton";
+import { NAV_ITEMS, SectionId } from "./types/navigation";
 
-function App() {
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [sectionTitle, setSectionTitle] = useState("Início");
+export default function App() {
+  const [isPanelExpanded, setIsPanelExpanded] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<SectionId>("about");
 
-  const openMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleSelectSection = (section: SectionId) => {
+    setActiveSection(section);
+    setIsMobileMenuOpen(false);
   };
 
-  const showSection = (sectionTitle: string) => {
-    setSectionTitle(sectionTitle);
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const minimizeHome = () => {
-    setIsMinimized(true);
+  const renderActiveSection = () => {
+    switch (activeSection) {
+      case "about":
+      // return <About />;
+      case "education":
+      // return <Education />;
+      case "experience":
+      // return <Experience />;
+      case "contact":
+      // return <Contact />;
+    }
   };
 
   return (
-    <div className="container">
-      {sectionTitle === "Início" && (
-        <>
-          <Hero isMinimized={isMinimized} />
-          <Perfil isMinimized={isMinimized} />
-        </>
-      )}
+    <div className="layout-container">
+      {/* Botão de alternância lateral para desktop */}
+      <button
+        type="button"
+        className={`chevron-toggle ${isPanelExpanded ? "is-hidden" : ""}`}
+        onClick={() => setIsPanelExpanded(true)}
+        aria-label="Expandir detalhes"
+      >
+        <img src="./icons/chevron-double.png" alt="" />
+      </button>
 
-      {sectionTitle === "Sobre" && (
-        <section>
-          <About title={sectionTitle} />
-        </section>
-      )}
+      {/* Painel Esquerdo: Identificação e Bio */}
+      <Hero isExpanded={isPanelExpanded} />
 
-      {sectionTitle === "Formação" && (
-        <section>
-          <Education title={sectionTitle} />
-        </section>
-      )}
-
-      {sectionTitle === "Experiência" && (
-        <section>
-          <Experience title={sectionTitle} />
-        </section>
-      )}
-
-      {sectionTitle === "Contato" && (
-        <section>
-          <Contact title={sectionTitle} />
-        </section>
-      )}
-
-      {/* Botão para minimizar home e mostrar menus das seções (web)) */}
-      <img
-        id="btn-chevron"
-        onClick={minimizeHome}
-        className={isMinimized ? "hidden" : ""}
-        src="./icons/chevron-double.png"
+      {/* Painel Direito Desktop: Navegação interna e Conteúdo */}
+      <ProfileDetails
+        isExpanded={isPanelExpanded}
+        activeSection={activeSection}
+        onSelectSection={handleSelectSection}
+        renderContent={renderActiveSection}
       />
 
-      {/* Botão para abrir menu das seções (mobile) */}
-      <div className="menu-mobile-icon" onClick={openMenu}>
-        ☰
-      </div>
+      {/* Botão Hamburger (Mobile) */}
+      <button
+        type="button"
+        className="mobile-menu-trigger"
+        onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+        aria-expanded={isMobileMenuOpen}
+        aria-label="Alternar menu de navegação"
+      >
+        {isMobileMenuOpen ? "✕" : "☰"}
+      </button>
 
-      {/* Menu (mobile) */}
-      <nav className={isMenuOpen ? "menu-mobile menu-open" : "menu-mobile"}>
+      {/* Drawer Mobile */}
+      <nav className={`mobile-drawer ${isMobileMenuOpen ? "is-open" : ""}`}>
         <ul>
-          <li onClick={() => showSection("Início")}>Início</li>
-          {topics.map((topic) => {
-            return (
-              <li key={topic} onClick={() => showSection(topic)}>
-                {topic}
-              </li>
-            );
-          })}
+          {NAV_ITEMS.map(({ id, label }) => (
+            <li key={id}>
+              <button
+                type="button"
+                className={`drawer-link ${activeSection === id ? "is-active" : ""}`}
+                onClick={() => handleSelectSection(id)}
+              >
+                {label}
+              </button>
+            </li>
+          ))}
         </ul>
       </nav>
+
+      {/* Container visível apenas no fluxo Mobile */}
+      <main className="mobile-content-view">{renderActiveSection()}</main>
+
+      <DownloadButton isVisible={isPanelExpanded} />
     </div>
   );
 }
-
-export default App;
