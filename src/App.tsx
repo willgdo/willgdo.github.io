@@ -1,13 +1,13 @@
 import { useState } from "react";
-import Hero from "../components/Hero.tsx";
-import Perfil from "../components/Perfil.tsx";
-import About from "../components/About.tsx";
-import Education from "../components/Education.js";
-import Experience from "../components/Experience.js";
-import Contact from "../components/Contact.js";
-import { topics } from "../utils/utils.js";
+import Hero from "./components/Hero.tsx";
+import Perfil from "./components/Perfil.tsx";
+import About from "./components/About.tsx";
+import Education from "./components/Education.js";
+import Experience from "./components/Experience.js";
+import Contact from "./components/Contact.js";
+import { topics } from "./utils/utils.js";
 
-export function Home() {
+function App() {
   const [isMinimized, setIsMinimized] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [sectionTitle, setSectionTitle] = useState("Início");
@@ -87,3 +87,5 @@ export function Home() {
     </div>
   );
 }
+
+export default App;
