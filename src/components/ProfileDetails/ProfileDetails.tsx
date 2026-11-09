@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { NAV_ITEMS, SectionId } from "../types/navigation";
+import { NAV_ITEMS, SectionId } from "../../types/navigation";
 
 interface ProfileDetailsProps {
   isExpanded: boolean;

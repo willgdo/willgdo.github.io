@@ -1,0 +1,164 @@
+.educationSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  color: var(--gray-200);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--gray-500);
+  padding-bottom: 1rem;
+}
+
+.title {
+  font: var(--title-md);
+  color: var(--gray-100);
+  margin: 0;
+}
+
+.subtitle {
+  font: var(--text);
+  color: var(--gray-300);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Timeline Vertical */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 0.75rem;
+}
+
+/* Linha contínua cinza conectando os pontos */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 6px;
+  width: 2px;
+  background: var(--gray-500);
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 1.75rem;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+/* Marcador (Dot) */
+.timelineMarker {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.35rem;
+  z-index: 1;
+}
+
+.markerDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--gray-400);
+  border: 3px solid var(--gray-600);
+  box-shadow: 0 0 0 2px var(--gray-400);
+  transition: all 0.25s ease;
+}
+
+/* Destaque para formações principais */
+.isMain .markerDot {
+  background-color: var(--red);
+  box-shadow: 0 0 0 2px var(--red);
+}
+
+/* Card de Conteúdo */
+.card {
+  flex: 1;
+  background-color: var(--gray-500);
+  border: 1px solid rgba(22, 24, 29, 0.08);
+  border-radius: 10px;
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.timelineItem:hover .card {
+  transform: translateX(4px);
+  border-color: rgba(227, 100, 99, 0.4);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.schoolName {
+  font: var(--subtitle);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-100);
+  margin: 0;
+}
+
+.badgePrincipal {
+  font: var(--subtitle);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--red);
+  background-color: rgba(227, 100, 99, 0.12);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.courseTitle {
+  font: var(--text);
+  font-weight: 600;
+  color: var(--gray-200);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.courseDetails {
+  font: var(--text);
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Ajustes Mobile */
+@media (max-width: 600px) {
+  .timeline {
+    margin-left: 0.25rem;
+  }
+
+  .timelineItem {
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .schoolName {
+    font-size: 0.95rem;
+  }
+}

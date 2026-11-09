@@ -1,4 +1,4 @@
-import { stacks } from "../utils/utils";
+import { stacks } from "../../utils/utils";
 
 interface HeroProps {
   isExpanded: boolean;

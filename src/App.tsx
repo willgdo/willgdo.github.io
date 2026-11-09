@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Hero from "./components/Hero";
-import ProfileDetails from "./components/ProfileDetails";
-import About from "./components/About";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import Contact from "./components/Contact";
-import DownloadButton from "./components/DownloadButton";
+import Hero from "./components/Hero/Hero";
+import ProfileDetails from "./components/ProfileDetails/ProfileDetails";
+import About from "./components/About/About";
+import Education from "./components/Education/Education";
+import Experience from "./components/Experience/Experience";
+import Contact from "./components/Contact/Contact";
+import DownloadButton from "./components/DownloadButton/DownloadButton";
 import { NAV_ITEMS, SectionId } from "./types/navigation";
 
 export default function App() {
@@ -21,13 +21,13 @@ export default function App() {
   const renderActiveSection = () => {
     switch (activeSection) {
       case "about":
-      // return <About />;
+        return <About title={"Sobre"} />;
       case "education":
-      // return <Education />;
+        return <Education />;
       case "experience":
-      // return <Experience />;
+        return <Experience />;
       case "contact":
-      // return <Contact />;
+        return <Contact />;
     }
   };
 

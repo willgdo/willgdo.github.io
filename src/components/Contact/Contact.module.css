@@ -1,0 +1,146 @@
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  color: var(--gray-200);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--gray-500);
+  padding-bottom: 1rem;
+}
+
+.title {
+  font: var(--title-md);
+  color: var(--gray-100);
+  margin: 0;
+}
+
+.subtitle {
+  font: var(--text);
+  color: var(--gray-300);
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Grid de Canais de Contato */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  background-color: var(--gray-500);
+  border: 1px solid rgba(22, 24, 29, 0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--red);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cardLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.iconWrapper {
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: var(--gray-600);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  overflow: hidden;
+}
+
+.platformName {
+  font: var(--subtitle);
+  font-size: 0.95rem;
+  color: var(--gray-100);
+  font-weight: 700;
+}
+
+.handle {
+  font: var(--text);
+  font-size: 0.825rem;
+  color: var(--gray-400);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.arrowIndicator {
+  font-size: 1.25rem;
+  color: var(--gray-400);
+  margin-left: auto;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.card:hover .arrowIndicator {
+  color: var(--red);
+  transform: translate(2px, -2px);
+}
+
+/* Botão de Copiar E-mail */
+.copyBtn {
+  background: var(--gray-600);
+  border: 1px solid var(--gray-400);
+  color: var(--gray-300);
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+.copyBtn:hover {
+  background-color: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+
+/* Ajuste Mobile */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
