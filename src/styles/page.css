@@ -1,33 +1,40 @@
 /* Layout Principal */
+.app,
 .layout-container {
-  min-height: 100dvh;
+  height: 100dvh; /* dvh evita quebras na viewport mobile */
   width: 100%;
   display: flex;
+  overflow: hidden; /* Trava qualquer rolagem na janela inteira */
   position: relative;
-  overflow: hidden;
   background-color: var(--gray-600);
 }
 
 /* Painel Esquerdo (Hero) */
+.header,
 .hero-panel {
+  height: 100dvh;
   width: 100%;
-  min-height: 100dvh;
   background-color: var(--gray-200);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Não permite scroll no Hero */
+  flex-shrink: 0;
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10;
 }
 
+.header.minimized,
 .hero-panel--contracted {
   width: 40%;
   box-shadow: 4px 0 16px rgba(0, 0, 0, 0.4);
 }
 
+.header-app,
 .hero-content {
-  width: min(85%, 440px);
-  padding: 2rem 1rem;
+  width: min(90%, 420px);
+  padding: 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -88,27 +95,31 @@
 }
 
 /* Painel Direito (Detalhes) */
+.information,
 .details-panel {
-  width: 0;
-  min-height: 100dvh;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0%;
+  height: 100dvh;
   overflow: hidden;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
 }
 
+.information.i-expanded,
 .details-panel--visible {
   width: 60%;
 }
 
+.information-content,
 .details-container {
   width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Navegação por Abas */
@@ -148,10 +159,16 @@
   font-weight: 600;
 }
 
+.section-content,
 .details-body {
-  margin-top: 2rem;
-  overflow-y: auto;
-  padding-right: 0.5rem;
+  width: 100%;
+  max-width: 680px;
+  flex: 1; /* Ocupa todo o espaço vertical disponível abaixo da navbar */
+  overflow-y: auto; /* Scroll exclusivo deste bloco */
+  overflow-x: hidden;
+  padding-right: 0.75rem;
+  margin-top: 1.5rem;
+  box-sizing: border-box;
 }
 
 /* Botão Chevron */
@@ -246,11 +263,36 @@
   display: none;
 }
 
+/* Barra de rolagem discreta e elegante para a área de conteúdo */
+.section-content::-webkit-scrollbar,
+.details-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.section-content::-webkit-scrollbar-track,
+.details-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.section-content::-webkit-scrollbar-thumb,
+.details-body::-webkit-scrollbar-thumb {
+  background-color: var(--gray-400);
+  border-radius: 4px;
+}
+
+.section-content::-webkit-scrollbar-thumb:hover,
+.details-body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--red);
+}
+
 /* ----------------- Breakpoints Mobile & Tablet ----------------- */
 @media (max-width: 900px) {
+  .app,
   .layout-container {
+    height: auto;
+    min-height: 100dvh;
+    overflow-y: auto; /* Libera o scroll vertical normal no celular */
     flex-direction: column;
-    overflow-y: auto;
   }
 
   .chevron-toggle,
@@ -258,11 +300,16 @@
     display: none;
   }
 
+  .header,
   .hero-panel {
-    width: 100%;
-    min-height: auto;
-    padding-top: 3.5rem;
-    box-shadow: none;
+    height: auto;
+    min-height: 100dvh;
+    width: 100% !important;
+  }
+
+  .information,
+  .details-panel {
+    display: none; /* No mobile o controle é via menu drawer e seção renderizada */
   }
 
   .hero-panel--contracted {
