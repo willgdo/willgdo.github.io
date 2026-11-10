@@ -8,50 +8,70 @@ interface EducationItem {
 }
 
 export default function Education() {
+  const items = education as EducationItem[];
+  const mainDegrees = items.filter((item) => item.main);
+  const complementaryCourses = items.filter((item) => !item.main);
+
   return (
     <article className={styles.educationSection}>
       <header className={styles.header}>
         <h3 className={styles.title}>Formação & Especializações</h3>
         <p className={styles.subtitle}>
-          Trajetória acadêmica com foco em computação, inteligência artificial e
-          aprendizado contínuo.
+          Base acadêmica sólida e aprendizado contínuo focado em tecnologia e
+          inteligência artificial.
         </p>
       </header>
 
-      <div className={styles.timeline}>
-        {(education as EducationItem[]).map((item) => {
-          const [degreeOrTitle, details] = item.course;
-          const isMainDegree = Boolean(item.main);
-
-          return (
-            <div
-              key={`${item.school}-${degreeOrTitle}`}
-              className={`${styles.timelineItem} ${isMainDegree ? styles.isMain : ""}`}
-            >
-              {/* Marcador gráfico da linha */}
-              <div className={styles.timelineMarker}>
-                <span className={styles.markerDot} />
-              </div>
-
-              {/* Conteúdo do Card */}
-              <div className={styles.card}>
-                <div className={styles.cardHeader}>
-                  <h4 className={styles.schoolName}>{item.school}</h4>
-                  {isMainDegree && (
-                    <span className={styles.badgePrincipal}>
-                      Graduação / Pós
-                    </span>
-                  )}
+      {/* Bloco 1: Formação Principal (Graduação / Pós) */}
+      <section className={styles.group}>
+        <span className={styles.groupHeading}>Formação Acadêmica</span>
+        <div className={styles.mainGrid}>
+          {mainDegrees.map((item) => {
+            const [courseTitle, details] = item.course;
+            return (
+              <div
+                key={`${item.school}-${courseTitle}`}
+                className={styles.mainCard}
+              >
+                <div className={styles.cardTop}>
+                  <span className={styles.iconTag}>🎓</span>
+                  <span className={styles.academicBadge}>Ensino Superior</span>
                 </div>
-
-                <p className={styles.courseTitle}>{degreeOrTitle}</p>
-
-                {details && <p className={styles.courseDetails}>{details}</p>}
+                <h4 className={styles.courseTitle}>{courseTitle}</h4>
+                <p className={styles.schoolName}>{item.school}</p>
+                {details && <p className={styles.details}>{details}</p>}
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Bloco 2: Especializações / Cursos Complementares */}
+      {complementaryCourses.length > 0 && (
+        <section className={styles.group}>
+          <span className={styles.groupHeading}>
+            Certificações & Complementares
+          </span>
+          <div className={styles.complementaryGrid}>
+            {complementaryCourses.map((item) => {
+              const [courseTitle, details] = item.course;
+              return (
+                <div
+                  key={`${item.school}-${courseTitle}`}
+                  className={styles.complementaryCard}
+                >
+                  <div className={styles.cardTop}>
+                    <span className={styles.iconTagSmall}>📜</span>
+                    <span className={styles.institutionTag}>{item.school}</span>
+                  </div>
+                  <h4 className={styles.complementaryTitle}>{courseTitle}</h4>
+                  {details && <p className={styles.detailsSmall}>{details}</p>}
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
     </article>
   );
 }
