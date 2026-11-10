@@ -71,7 +71,8 @@ export const experience: ExperienceProps[] = [
     period: "Mai/2025 - Ago/2026 (1 ano e 3 meses)",
     location: "São Paulo",
     type: "Remoto",
-    description: "",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Visto Tecnologia",
@@ -80,7 +81,8 @@ export const experience: ExperienceProps[] = [
     period: "Mar/2017 - Dez/2024 (7 anos e 9 meses)",
     location: "São Paulo",
     type: "Remoto",
-    description: "",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Santa Transmedia",
@@ -89,7 +91,8 @@ export const experience: ExperienceProps[] = [
     period: "Jul/2016 - Jan/2017 (7 meses) ",
     location: "São Paulo",
     type: "Presencial",
-    description: "",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Avelor",
@@ -98,7 +101,8 @@ export const experience: ExperienceProps[] = [
     period: "Out/2015 - Jul/2016 (9 meses)",
     location: "São Paulo",
     type: "Presencial",
-    description: "",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
 

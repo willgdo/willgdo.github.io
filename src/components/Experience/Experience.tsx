@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { experience } from "../../utils/utils";
 import styles from "./Experience.module.css";
 
@@ -12,58 +13,85 @@ interface ExperienceItem {
 }
 
 export default function Experience() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
     <article className={styles.experienceSection}>
       <header className={styles.header}>
         <h3 className={styles.title}>Experiência Profissional</h3>
         <p className={styles.subtitle}>
-          Quase uma década construindo soluções corporativas, arquiteturas de UI
-          e produtos web de alto impacto.
+          Trajetória em arquitetura front-end, produtos web escaláveis e
+          liderança técnica.
         </p>
       </header>
 
-      <div className={styles.experienceList}>
-        {(experience as ExperienceItem[]).map((item) => (
-          <div
-            className={styles.experienceCard}
-            key={`${item.name}-${item.role}-${item.period}`}
-          >
-            <div className={styles.logoWrapper}>
-              <img
-                src={item.urlLogo}
-                alt={`Logo da empresa ${item.name}`}
-                className={styles.logo}
-                loading="lazy"
-                onError={(e) => {
-                  // Fallback elegante caso a imagem remota ou local falhe
-                  (e.currentTarget as HTMLElement).style.display = "none";
-                }}
-              />
-            </div>
+      <div className={styles.accordionList}>
+        {(experience as ExperienceItem[]).map((item, index) => {
+          const isExpanded = expandedIndex === index;
 
-            <div className={styles.details}>
-              <div className={styles.headerBlock}>
-                <div>
-                  <h4 className={styles.roleTitle}>{item.role}</h4>
-                  <span className={styles.companyName}>{item.name}</span>
+          return (
+            <div
+              key={`${item.name}-${item.role}-${item.period}`}
+              className={`${styles.accordionItem} ${isExpanded ? styles.isOpen : ""}`}
+            >
+              {/* Gatilho Clicável: APENAS Logo, Nome da Empresa, Cargo e Chevron */}
+              <button
+                type="button"
+                className={styles.accordionTrigger}
+                onClick={() => toggleExpand(index)}
+                aria-expanded={isExpanded}
+              >
+                <div className={styles.companySummary}>
+                  <div className={styles.logoWrapper}>
+                    <img
+                      src={item.urlLogo}
+                      alt={`Logo ${item.name}`}
+                      className={styles.logo}
+                      loading="lazy"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLElement).style.display = "none";
+                      }}
+                    />
+                  </div>
+
+                  <div className={styles.identity}>
+                    <h4 className={styles.companyName}>{item.name}</h4>
+                    <span className={styles.roleTitle}>{item.role}</span>
+                  </div>
                 </div>
 
-                <div className={styles.tagsGroup}>
-                  <span className={styles.periodBadge}>{item.period}</span>
-                  <span className={styles.typeBadge}>{item.type}</span>
+                <div className={styles.actionBlock}>
+                  <span
+                    className={`${styles.chevron} ${isExpanded ? styles.chevronRotated : ""}`}
+                    aria-hidden="true"
+                  >
+                    ▾
+                  </span>
                 </div>
-              </div>
+              </button>
 
-              <div className={styles.metaRow}>
-                <span className={styles.location}>📍 {item.location}</span>
-              </div>
+              {isExpanded && (
+                <div className={styles.accordionContent}>
+                  <div className={styles.metaRow}>
+                    <span className={styles.periodBadge}>🗓 {item.period}</span>
+                    <span className={styles.locationBadge}>
+                      📍 {item.location}
+                    </span>
+                    <span className={styles.typeBadge}>{item.type}</span>
+                  </div>
 
-              {item.description && (
-                <p className={styles.description}>{item.description}</p>
+                  {item.description && (
+                    <p className={styles.descriptionText}>{item.description}</p>
+                  )}
+                </div>
               )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </article>
   );
