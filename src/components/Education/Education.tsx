@@ -17,8 +17,8 @@ export default function Education() {
       <header className={styles.header}>
         <h3 className={styles.title}>Formação & Especializações</h3>
         <p className={styles.subtitle}>
-          Base acadêmica sólida e aprendizado contínuo focado em tecnologia e
-          inteligência artificial.
+          Minhas experiências acadêmicas e cursos complementares que
+          contribuíram para minha formação profissional.
         </p>
       </header>
 

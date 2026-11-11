@@ -24,8 +24,8 @@ export default function Experience() {
       <header className={styles.header}>
         <h3 className={styles.title}>Experiência Profissional</h3>
         <p className={styles.subtitle}>
-          Trajetória em arquitetura front-end, produtos web escaláveis e
-          liderança técnica.
+          Minhas experiências profissionais, destacando cargos, empresas e
+          períodos de atuação.
         </p>
       </header>
 

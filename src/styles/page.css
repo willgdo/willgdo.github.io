@@ -33,7 +33,7 @@
 
 .header-app,
 .hero-content {
-  width: min(90%, 420px);
+  width: min(90%, 480px);
   padding: 1.5rem;
   text-align: center;
   display: flex;

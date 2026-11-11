@@ -48,16 +48,24 @@ export default function About({ title = "Sobre" }: AboutProps) {
           Eu sou <strong>Willian</strong> (mas pode me chamar de{" "}
           <strong>Will</strong>). Tenho 31 anos, moro em São Paulo, sou casado e
           pai de um mini adolescente de 4 anos! Além da tecnologia, outra grande
-          paixão que tenho é a aviação: em 2022 realizei o sonho de obter minha
-          licença de piloto comercial/privado.
+          paixão que tenho é a aviação! Em 2022, realizei meu grande sonho e
+          tirei minha licença de piloto.
         </p>
 
         <p>
-          Com quase uma década de experiência no desenvolvimento de software,
-          foco minha atuação em <strong>Arquitetura de UI</strong>,{" "}
-          <strong>React</strong>, <strong>TypeScript</strong> e{" "}
-          <strong>Microfrontends</strong>, buscando sempre performance sólida,
-          código manutenível e experiências consistentes de ponta a ponta.
+          Desde sempre fui fascinado por tecnologia e sabia que essa era a área
+          que queria seguir. Hoje, com quase uma década de experiência como
+          desenvolvedor, tenho certeza de que fiz a melhor escolha! Ao longo da
+          minha trajetória, venho atuando principalmente como desenvolvedor
+          front-end, com foco em ReactJS, TypeScript, Microfrontends e
+          Arquitetura de UI, sempre explorando novas soluções e aberto a novos
+          desafios!
+        </p>
+
+        <p>
+          Sou uma pessoa curiosa, que adora aprender e experimentar novas
+          tecnologias. Também me considero altamente adaptável a diferentes
+          projetos e equipes.
         </p>
       </div>
 
@@ -81,8 +89,8 @@ export default function About({ title = "Sobre" }: AboutProps) {
 
       <footer className="about-cta">
         <p>
-          Se quiser trocar uma ideia sobre arquitetura web ou novos desafios,
-          fique à vontade para entrar em contato!
+          Se quiser saber algo mais, conversar sobre arquitetura web ou novos
+          desafiosfique à vontade para entrar em contato!
         </p>
       </footer>
     </article>

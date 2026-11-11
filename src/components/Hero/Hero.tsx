@@ -19,10 +19,10 @@ export default function Hero({ isExpanded }: HeroProps) {
         <h1 className="hero-title">Software Developer</h1>
 
         <p className="hero-description">
-          Desenvolvedor de software com quase uma década de experiência.
-          Especializado em arquiteturas de UI escaláveis, microfrontends e
-          performance web, transformando problemas complexos em interfaces
-          fluidas e limpas.
+          Desenvolvedor de software com 9 anos de experiência. Trabalhando para
+          arquiteturas de UI escaláveis e descomplicando desafios complexos,
+          unindo código limpo, alta performance e a melhor experiência de
+          usuário
         </p>
 
         <div className="tech-stack-list">

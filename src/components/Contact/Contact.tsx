@@ -4,10 +4,10 @@ import styles from "./Contact.module.css";
 
 // Mapeamento amigável para exibição limpa em vez de URL pura
 const PLATFORM_LABELS: Record<string, { label: string; handle: string }> = {
-  linkedin: { label: "LinkedIn", handle: "/in/will-oliveira" },
+  linkedin: { label: "LinkedIn", handle: "/in/willoliveira737" },
   github: { label: "GitHub", handle: "@willgdo" },
-  email: { label: "E-mail", handle: "willian.goncalves@..." },
-  instagram: { label: "Instagram", handle: "@willgdo" },
+  email: { label: "E-mail", handle: "willian.oliveira737@gmail.com" },
+  instagram: { label: "Codepen", handle: "@willgdo" },
 };
 
 export default function Contact() {
@@ -24,7 +24,7 @@ export default function Contact() {
       <header className={styles.header}>
         <h3 className={styles.title}>Vamos conversar?</h3>
         <p className={styles.subtitle}>
-          Sinta-se à vontade para me chamar para oportunidades, parcerias ou
+          Sinta-se à vontade para me chamar para uma oportunidades ou apenas
           trocar uma ideia sobre arquitetura e código.
         </p>
       </header>
